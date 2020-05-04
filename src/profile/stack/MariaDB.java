@@ -299,10 +299,10 @@ public class MariaDB extends AStructuredProfile {
 		final Collection<IUnit> units = new ArrayList<>();
 
 		getNetworkModel().getServerModel(getLabel()).getAptSourcesModel().addAptSource("mariadb",
-				"deb http://mirror.sax.uk.as61049.net/mariadb/repo/10.2/debian buster main", "keyserver.ubuntu.com",
+				"deb [arch=amd64] http://mirror.host.ag/mariadb/repo/10.4/debian buster main", "keyserver.ubuntu.com",
 				"0xF1656F24C74CD1D8");
 
-		getNetworkModel().getServerModel(getLabel()).addEgress("mirror.sax.uk.as61049.net");
+		getNetworkModel().getServerModel(getLabel()).addEgress("mirror.host.ag");
 
 		return units;
 	}
